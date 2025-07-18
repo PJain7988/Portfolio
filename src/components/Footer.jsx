@@ -11,12 +11,14 @@ const sitemap = [
 ];
 
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/priyajain7988' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/priyajain7988' },
-  { label: 'Instagram', href: 'https://www.instagram.com/priyajain7988' },
-  { label: 'LeetCode', href: 'https://leetcode.com/priyajain7988' },
-  { label: 'GeeksforGeeks', href: 'https://auth.geeksforgeeks.org/user/priyajain7988/profile' },
-  { label: 'Portfolio', href: 'https://priyajain-portfolio.vercel.app' }
+  { label: 'Email', href: 'mailto:priyajain7988@gmail.com' },
+  { label: 'GitHub', href: 'https://github.com/PJain7988' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/priya72062/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/im__garg_551/' },
+  { label: 'LeetCode', href: 'https://leetcode.com/u/Student_GU/' },
+  { label: 'GeeksforGeeks', href: 'https://www.geeksforgeeks.org/user/user_96fineo2gqw/' },
+  { label: 'HackerRank', href: 'https://www.hackerrank.com/profile/2301301053_priya' },
+  { label: 'Portfolio', href: 'https://portfolio-alpha-eosin-98.vercel.app/' }
 ];
 
 const Footer = () => {
