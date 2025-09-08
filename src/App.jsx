@@ -15,6 +15,7 @@ import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Internship from "./components/Internship";
+import CodingAchievements from "./components/CodingAchievements";
 const App = () => {
 
   useGSAP(()=>{
@@ -44,6 +45,7 @@ const App = () => {
         <Internship/>
         <Skill />
         <Project />
+        <CodingAchievements />
         <Review />
         <Contact />
       </main>

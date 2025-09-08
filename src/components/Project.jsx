@@ -3,10 +3,10 @@ import ProjectCard from './ProjectCard';
 const projects = [
   {
     imgSrc: '/images/project-1.jpg',
-    title: 'Full stack music app',
-    tags: ['API', 'MVC', 'Development'],
-    projectLink: 'https://musify-5al0.onrender.com/'
-  },
+    title: 'LeetCode DSA Practice',
+    tags: ['C++', 'DSA', 'Problem Solving'],
+    projectLink: 'https://leetcode.com/u/student_GU/'
+},
   {
     imgSrc: '/images/project-2.jpg',
     title: 'Free stock photo app',
@@ -45,7 +45,7 @@ const Project = () => {
     id="project"
     className="section">
         <div className="container">
-            <h2 className="headline-2 mb-8 reveal-up">
+            <h2 className="headline-2 mb-8 reveal-up text-center">
                 My portfolio highlights
             </h2>
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,1fr))]">
