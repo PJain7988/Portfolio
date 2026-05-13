@@ -4,7 +4,7 @@ const internships = [
   {
     role: 'Full Stack Development Intern',
     duration: 'June 2025 – August 2025',
-    company: 'Coding Blocks, Geeta University, Panipat',
+    company: 'Coding Blocks (Geeta University, Panipat)',
     details: [
       'Designed and developed end-to-end full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).',
       'Created responsive, scalable UIs and integrated RESTful APIs to ensure seamless user experience and efficient data flow.',
@@ -14,7 +14,7 @@ const internships = [
   {
     role: 'Data Structures & Algorithms (DSA) with C++',
     duration: 'June 2024 – August 2024',
-    company: 'Coding Blocks, Geeta University, Panipat',
+    company: 'Coding Blocks (Geeta University, Panipat)',
     details: [
       'Solved 700+ DSA problems on LeetCode, mastering advanced topics including recursion, dynamic programming, backtracking, and greedy algorithms.',
       'Participated in peer learning and mentoring sessions to reinforce understanding of core computer science concepts and algorithm design.',
