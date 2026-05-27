@@ -1,42 +1,49 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
+
 const projects = [
+  {
+    imgSrc: '/images/kimi-chat.png',
+    title: 'KimiChat - A Chat App',
+    tags: ['React', 'NodeJS', 'Socket.io', 'TailwindCSS'],
+    projectLink: 'https://kimi-chat-app.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/KimiChat_App'
+  },
+  {
+    imgSrc: '/images/career-karma.png',
+    title: 'CareerKarma - A Job Portal',
+    tags: ['MERN Stack', 'Redux', 'TailwindCSS', 'REST API'],
+    projectLink: 'https://career-karma-job-portal.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/CareerKarma_Job_Portal'
+  },
+  {
+    imgSrc: '/images/ecommerce.png',
+    title: 'E-Commerce Platform',
+    tags: ['React', 'Context API', 'Vanilla CSS', 'Responsive'],
+    projectLink: 'https://project-website-development.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/Project_Website_Development'
+  },
+  {
+    imgSrc: '/images/scholar-space.png',
+    title: 'ScholarSpace - Notes App',
+    tags: ['React', 'Local Storage', 'TailwindCSS', 'Vite'],
+    projectLink: 'https://scholar-space-nine.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/ScholarSpace'
+  },
   {
     imgSrc: '/images/project-1.jpg',
     title: 'LeetCode DSA Practice',
     tags: ['C++', 'DSA', 'Problem Solving'],
-    projectLink: 'https://leetcode.com/u/student_GU/'
-},
+    projectLink: 'https://leetcode.com/u/student_GU/',
+    githubLink: ''
+  },
   {
     imgSrc: '/images/project-2.jpg',
-    title: 'Free stock photo app',
-    tags: ['API', 'SPA'],
-    projectLink: 'https://pixstock-official.vercel.app/'
-  },
-  {
-    imgSrc: '/images/project-3.jpg',
-    title: 'Recipe app',
-    tags: ['Development', 'API'],
-    projectLink: ''
-  },
-  {
-    imgSrc: '/images/project-4.jpg',
-    title: 'Real state website',
-    tags: ['Web-design', 'Development'],
-    projectLink: 'https://github.com/codewithsadee-org/wealthome'
-  },
-  {
-    imgSrc: '/images/project-5.jpg',
-    title: 'eCommerce website',
-    tags: ['eCommerce', 'Development'],
-    projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
-  },
-  {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
-  },
+    title: 'PixStock - Free Stock Photo App',
+    tags: ['React', 'Pexels API', 'SPA'],
+    projectLink: 'https://pixstock-official.vercel.app/',
+    githubLink: ''
+  }
 ];
 
 const Project = () => {
@@ -49,13 +56,14 @@ const Project = () => {
                 My portfolio highlights
             </h2>
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,1fr))]">
-                {projects.map(({imgSrc,title,tags,projectLink}, key) => (
+                {projects.map(({imgSrc, title, tags, projectLink, githubLink}, key) => (
                     <ProjectCard
                     key={key}
                     imgSrc={imgSrc}
                     title={title}
                     tags={tags}
                     projectLink={projectLink}
+                    githubLink={githubLink}
                     classes="reveal-up"
                     />
                 )
