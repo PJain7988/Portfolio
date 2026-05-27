@@ -38,6 +38,13 @@ const projects = [
     githubLink: ''
   },
   {
+    imgSrc: '/images/fruitables.png',
+    title: 'Fruitables - Organic E-Commerce',
+    tags: ['React', 'TailwindCSS', 'Vite', 'E-Commerce'],
+    projectLink: 'https://fruitables-five.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/Fruitables'
+  },
+  {
     imgSrc: '/images/project-2.jpg',
     title: 'PixStock - Free Stock Photo App',
     tags: ['React', 'Pexels API', 'SPA'],
