@@ -31,13 +31,6 @@ const projects = [
     githubLink: 'https://github.com/PJain7988/ScholarSpace'
   },
   {
-    imgSrc: '/images/project-1.jpg',
-    title: 'LeetCode DSA Practice',
-    tags: ['C++', 'DSA', 'Problem Solving'],
-    projectLink: 'https://leetcode.com/u/student_GU/',
-    githubLink: ''
-  },
-  {
     imgSrc: '/images/fruitables.png',
     title: 'Fruitables - Organic E-Commerce',
     tags: ['React', 'TailwindCSS', 'Vite', 'E-Commerce'],
@@ -45,7 +38,7 @@ const projects = [
     githubLink: 'https://github.com/PJain7988/Fruitables'
   },
   {
-    imgSrc: '/images/project-2.jpg',
+    imgSrc: '/images/pixstock.png',
     title: 'PixStock - Free Stock Photo App',
     tags: ['React', 'Pexels API', 'SPA'],
     projectLink: 'https://pixstock-official.vercel.app/',
