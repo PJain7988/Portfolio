@@ -5,8 +5,14 @@ export default function CodingAchievements() {
   const achievements = [
     {
       imgSrc: "/images/leetcodeprofile.jpg",
-      title: "LeetCode",
-      tags: ["1000+ Problems Solved", "Max Rating: 1551", "C++", "DSA"],
+      title: "LeetCode: 1000+ Problems",
+      tags: ["1000+ Problems Solved", "DSA", "Problem Solving"],
+      verifyLink: "https://leetcode.com/u/Student_GU/",
+    },
+    {
+      imgSrc: "/images/leetcodeBadge.png",
+      title: "LeetCode: Top 32% Globally",
+      tags: ["Max Rating: 1551", "Competitive Programming"],
       verifyLink: "https://leetcode.com/u/Student_GU/",
     },
     {
@@ -17,9 +23,21 @@ export default function CodingAchievements() {
     },
     {
       imgSrc: "/images/HackerRank.png",
-      title: "HackerRank",
+      title: "HackerRank 5★ C++",
       tags: ["5★ C++", "Verified Certifications"],
       verifyLink: "https://www.hackerrank.com/profile/2301301053_priya",
+    },
+    {
+      imgSrc: "/images/google_gemini.png",
+      title: "Google Gemini Certified Student",
+      tags: ["Google for Education", "Generative AI", "Certification"],
+      verifyLink: "#",
+    },
+    {
+      imgSrc: "/images/100days.png",
+      title: "#100DaysOfCode Challenge",
+      tags: ["Consistency", "Web Development", "DSA"],
+      verifyLink: "https://github.com/PJain7988/100_Day_challenge",
     },
     {
       imgSrc: "/images/code-carnage.png",
