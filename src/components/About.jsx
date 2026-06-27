@@ -23,7 +23,7 @@ const About = () => {
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Me</span>
               </h2>
               <p className="text-zinc-300 mb-6 text-lg leading-relaxed font-medium">
-                Hello! I'm <strong className="text-white">Priya Jain</strong>, a passionate Software Engineer and Computer Science student at Geeta University (Class of 2027), specializing in Full-Stack Development and Artificial Intelligence.
+                Hello! I'm <strong className="text-white">Priya Jain</strong>, a passionate Software Development Engineer (SDE) and Computer Science student at Geeta University, specializing in Full-Stack Development and Artificial Intelligence.
               </p>
               <p className="text-zinc-400 mb-10 leading-relaxed text-lg">
                 With a robust foundation in Data Structures and Algorithms, I thrive on solving complex computational challenges and engineering highly optimized solutions. My expertise lies in architecting scalable web applications using the MERN stack and integrating intelligent systems. I am driven by a continuous desire to innovate, learn, and build impactful software that bridges the gap between complex algorithms and seamless user experiences.
