@@ -23,10 +23,10 @@ const About = () => {
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Me</span>
               </h2>
               <p className="text-zinc-300 mb-6 text-lg leading-relaxed font-medium">
-                Hi! I'm <strong className="text-white">Priya Jain</strong>, a Computer Science Engineering student pursuing my B.Tech at Geeta University (Class of 2027). 
+                Hello! I'm <strong className="text-white">Priya Jain</strong>, a passionate Software Engineer and Computer Science student at Geeta University (Class of 2027), specializing in Full-Stack Development and Artificial Intelligence.
               </p>
               <p className="text-zinc-400 mb-10 leading-relaxed text-lg">
-                I am deeply passionate about Data Structures, Algorithms, and building scalable software architectures. My journey involves crafting modern, highly-performant web applications using the MERN stack while continuously honing my problem-solving skills through competitive programming.
+                With a robust foundation in Data Structures and Algorithms, I thrive on solving complex computational challenges and engineering highly optimized solutions. My expertise lies in architecting scalable web applications using the MERN stack and integrating intelligent systems. I am driven by a continuous desire to innovate, learn, and build impactful software that bridges the gap between complex algorithms and seamless user experiences.
               </p>
               <div className="inline-block p-1.5 rounded-2xl bg-gradient-to-r from-zinc-800 to-zinc-900 border border-zinc-800/50 shadow-lg">
                  <img src="/images/logo.svg" alt="logo" width={40} height={40} className="w-[40px] h-[40px]" />
