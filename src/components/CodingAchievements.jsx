@@ -5,26 +5,21 @@ export default function CodingAchievements() {
   const achievements = [
     {
       imgSrc: "/images/leetcodeprofile.jpg",
-      title: "LeetCode Profile",
-      tags: ["C++", "DSA", "Problem Solving"],
-      verifyLink: "https://leetcode.com/u/student_GU/",
+      title: "LeetCode",
+      tags: ["1000+ Problems Solved", "Max Rating: 1551", "C++", "DSA"],
+      verifyLink: "https://leetcode.com/u/Student_GU/",
     },
     {
-      imgSrc: "/images/leetcodeBadge.png",
-      title: "LeetCode Badges",
-      tags: ["100+ Problems", "Daily Streak", "Consistency"],
-      verifyLink: "https://leetcode.com/u/student_GU/",
+      imgSrc: "/images/gfg.png",
+      title: "GeeksforGeeks",
+      tags: ["86+ Problems Solved", "Score: 240", "Problem Solving"],
+      verifyLink: "https://www.geeksforgeeks.org/user/user_96fineo2gqw/",
     },
     {
       imgSrc: "/images/HackerRank.png",
-      title: "HackerRank Profile",
-      tags: [
-        "Problem Solving (Basic)",
-        "Frontend Developer (React)",
-        "Node.js (Basic)",
-        "C++ Badge",
-      ],
-      verifyLink: "https://www.hackerrank.com/2301301053_priya",
+      title: "HackerRank",
+      tags: ["5★ C++", "Verified Certifications"],
+      verifyLink: "https://www.hackerrank.com/profile/2301301053_priya",
     },
     {
       imgSrc: "/images/code-carnage.png",
