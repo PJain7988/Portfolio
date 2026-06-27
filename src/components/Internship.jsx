@@ -2,6 +2,16 @@ import React from 'react';
 
 const internships = [
   {
+    role: 'AI/ML Developer',
+    duration: 'June 2026 – July 2026',
+    company: 'ThinkNEXT Technologies Pvt. Ltd., Mohali',
+    details: [
+      'Developed ML models using Python, Pandas, NumPy, and Scikit-learn for predictive analytics.',
+      'Performed data preprocessing, feature engineering, and exploratory data analysis on real-world datasets.',
+      'Implemented classification, regression, and clustering algorithms to solve business problems.',
+    ],
+  },
+  {
     role: 'Full Stack Development Intern',
     duration: 'June 2025 – August 2025',
     company: 'Coding Blocks (Geeta University, Panipat)',
