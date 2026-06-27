@@ -43,6 +43,13 @@ const projects = [
     tags: ['React', 'Pexels API', 'SPA'],
     projectLink: 'https://pixstock-official.vercel.app/',
     githubLink: ''
+  },
+  {
+    imgSrc: '/images/omnisync-ai.png',
+    title: 'OmniSync AI | Analytics Platform',
+    tags: ['MERN Stack', 'Machine Learning', 'NLP', 'Computer Vision'],
+    projectLink: '',
+    githubLink: ''
   }
 ];
 
