@@ -42,9 +42,9 @@ const App = () => {
       <main>
         <Hero />
         <About />
+        <Project />
         <Internship/>
         <Skill />
-        <Project />
         <CodingAchievements />
         <Review />
         <Contact />

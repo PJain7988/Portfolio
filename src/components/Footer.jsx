@@ -4,9 +4,9 @@ import { ButtonPrimary } from './Button';
 const sitemap = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Projects', href: '#project' },
   { label: 'Achievements', href: '#achievements' },
-  { label: 'Internships', href: '#internships' }, 
+  { label: 'Internships', href: '#internship' }, 
   { label: 'Reviews', href: '#reviews' },
   { label: 'Contact me', href: '#contact' }
 ];
