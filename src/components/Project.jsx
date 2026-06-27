@@ -50,6 +50,20 @@ const projects = [
     tags: ['React', 'Pexels API', 'SPA'],
     projectLink: 'https://pixstock-official.vercel.app/',
     githubLink: ''
+  },
+  {
+    imgSrc: '/images/aegiscare.png',
+    title: 'AegisCare - Healthcare Web App',
+    tags: ['React', 'Node.js', 'JWT Auth', 'RBAC'],
+    projectLink: 'https://aegis-care-health-care-api.vercel.app',
+    githubLink: 'https://github.com/PJain7988/AegisCare_HealthCare_API'
+  },
+  {
+    imgSrc: '/images/cognisphere.png',
+    title: 'CogniSphere - AI Tutor Dashboard',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    projectLink: 'https://cognisphere-ai-personal-tutor-dashboard.vercel.app',
+    githubLink: 'https://github.com/PJain7988/CogniSphere_-AI_Personal_Tutor_Dashboard'
   }
 ];
 
