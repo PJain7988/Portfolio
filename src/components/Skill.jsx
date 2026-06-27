@@ -24,7 +24,6 @@ const skillItem = [
   { imgSrc: '/images/ai-icon.svg', label: 'Machine Learning', desc: 'AI' },
   { imgSrc: '/images/ai-icon.svg', label: 'NLP', desc: 'AI' },
   { imgSrc: '/images/ai-icon.svg', label: 'Computer Vision', desc: 'AI' },
-  { imgSrc: '/images/ai-icon.svg', label: 'Data Analysis', desc: 'AI' },
   
   // Libraries & Frameworks
   { imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg', label: 'NumPy', desc: 'Libraries & Frameworks' },
