@@ -33,7 +33,7 @@ const projects = [
   {
     imgSrc: '/images/omnisync-ai.png',
     title: 'OmniSync AI | Analytics Platform',
-    tags: ['MERN Stack', 'NLP', 'Machine Learning', 'Computer Vision'],
+    tags: ['MERN Stack', 'NLP', 'ML', 'Computer Vision'],
     projectLink: 'https://omni-sync-ai.vercel.app/',
     githubLink: 'https://github.com/PJain7988/OmniSync-AI'
   },
