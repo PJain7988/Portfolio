@@ -31,7 +31,7 @@ export default function CodingAchievements() {
       imgSrc: "/images/google_gemini.png",
       title: "Google Gemini Certified Student",
       tags: ["Google for Education", "Generative AI", "Certification"],
-      verifyLink: "#",
+      verifyLink: "https://edu.google.accredible.com/ecefd81d-55c7-4dae-9729-9151b9929774",
     },
     {
       imgSrc: "/images/100days.png",
