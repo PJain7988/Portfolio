@@ -83,48 +83,25 @@ const Skill = () => {
           The core technologies, frameworks, and tools I use to architect clean, efficient, and scalable applications.
         </motion.p>
 
-        <div className="space-y-16">
+        <motion.div 
+            className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+        >
           {
-            Object.entries(
-              skillItem.reduce((acc, curr) => {
-                if (!acc[curr.desc]) acc[curr.desc] = [];
-                acc[curr.desc].push(curr);
-                return acc;
-              }, {})
-            ).map(([category, items], idx) => (
-              <div key={idx}>
-                <motion.h3 
-                  className="text-2xl md:text-3xl font-bold text-zinc-100 mb-6 pl-4 border-l-4 border-blue-500"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                  {category}
-                </motion.h3>
-                <motion.div 
-                    className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]"
-                    variants={container}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-50px" }}
-                >
-                  {
-                    items.map(({ imgSrc, label, desc }, key) => (
-                      <motion.div key={key} variants={item}>
-                        <SkillCard
-                          imgSrc={imgSrc}
-                          label={label}
-                          desc={desc}
-                        />
-                      </motion.div>
-                    ))
-                  }
-                </motion.div>
-              </div>
+            skillItem.map(({ imgSrc, label, desc }, key) => (
+              <motion.div key={key} variants={item}>
+                <SkillCard
+                  imgSrc={imgSrc}
+                  label={label}
+                  desc={desc}
+                />
+              </motion.div>
             ))
           }
-        </div>
+        </motion.div>
       </div>
     </section>
   );
