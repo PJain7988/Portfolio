@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 .material-symbols-rounded {
-    @apply w-[1rem] h-[1em] overflow-hidden;
+    @apply w-[1em] h-[1em] overflow-hidden;
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .btn .material-symbols-rounded{
-    @apply text-[18ox]
+    @apply text-[18px]
 }
 .btn:has( .material-symbols-rounded){
     @apply pr-3
