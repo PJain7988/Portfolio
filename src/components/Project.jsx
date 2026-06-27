@@ -31,6 +31,13 @@ const projects = [
     githubLink: 'https://github.com/PJain7988/ScholarSpace'
   },
   {
+    imgSrc: '/images/omnisync-ai.png',
+    title: 'OmniSync AI | Analytics Platform',
+    tags: ['MERN Stack', 'Machine Learning', 'NLP', 'Computer Vision'],
+    projectLink: 'https://omni-sync-ai.vercel.app/',
+    githubLink: 'https://github.com/PJain7988/OmniSync-AI'
+  },
+  {
     imgSrc: '/images/fruitables.png',
     title: 'Fruitables - Organic E-Commerce',
     tags: ['React', 'TailwindCSS', 'Vite', 'E-Commerce'],
@@ -43,13 +50,6 @@ const projects = [
     tags: ['React', 'Pexels API', 'SPA'],
     projectLink: 'https://pixstock-official.vercel.app/',
     githubLink: ''
-  },
-  {
-    imgSrc: '/images/omnisync-ai.png',
-    title: 'OmniSync AI | Analytics Platform',
-    tags: ['MERN Stack', 'Machine Learning', 'NLP', 'Computer Vision'],
-    projectLink: 'https://omni-sync-ai.vercel.app/',
-    githubLink: 'https://github.com/PJain7988/OmniSync-AI'
   }
 ];
 
