@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 * BASE
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-body{
-    @apply bg-zinc-900 text-zinc-50
+body {
+    @apply bg-zinc-900 text-zinc-50;
+    overflow-x: hidden;
 }
 .material-symbols-rounded {
     @apply w-[1rem] h-[1em] overflow-hidden;
@@ -79,8 +81,8 @@ body{
     @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
 }
 
-.section{
-    @apply pt-20 lg:pt-32
+.section {
+    @apply py-16 lg:py-24;
 }
 
 .title-1{

@@ -27,7 +27,7 @@ const Hero = () => {
                     </div>
 
                     <motion.h2
-                        className="headline-1 mt-5 mb-8 lg:mb-10 text-5xl sm:text-5xl font-extrabold leading-snug 
+                        className="headline-1 mt-5 mb-8 lg:mb-10 text-3xl md:text-5xl font-extrabold leading-snug 
                        bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 
                        bg-clip-text text-transparent"
                         initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ const Hero = () => {
                         />
                     </motion.h2>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3">
                         <a
                             href="/images/PriyaJainCV.pdf"
                             download
