@@ -59,14 +59,6 @@ const Hero = () => {
                         </div>
                     </motion.h2>
 
-                    <motion.p 
-                        className="text-zinc-400 text-lg md:text-xl max-w-[50ch] mb-10 leading-relaxed font-medium"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    >
-                        Architecting scalable web applications and intelligent systems. Passionate about algorithms, performance optimization, and seamless user experiences.
-                    </motion.p>
 
                     <motion.div 
                         className="flex flex-wrap items-center gap-4"
