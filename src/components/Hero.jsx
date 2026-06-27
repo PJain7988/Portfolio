@@ -36,13 +36,17 @@ const Hero = () => {
                     >
                         <Typewriter
                             words={[
-                                "Hi, I'm Priya Jain — Full-Stack Developer, DSA Enthusiast, C++ & LeetCode Coder",
+                                "Hi, I'm Priya Jain 👋",
+                                "Software Development Engineer",
+                                "Full-Stack Web Developer",
+                                "AI & Machine Learning Enthusiast",
+                                "Competitive Programmer"
                             ]}
-                            loop={false}
+                            loop={true}
                             cursor
                             cursorStyle="|"
                             typeSpeed={70}
-                            deleteSpeed={0}
+                            deleteSpeed={50}
                             delaySpeed={2000}
                         />
                     </motion.h2>
