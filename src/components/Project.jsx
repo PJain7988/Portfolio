@@ -18,8 +18,8 @@ const projects = [
   },
   {
     imgSrc: '/images/ecommerce.png',
-    title: 'E-Commerce Platform',
-    tags: ['React', 'Context API', 'Vanilla CSS', 'Responsive'],
+    title: 'Lumina - E-Commerce Solution',
+    tags: ['MERN Stack', 'Redux', 'OAuth', 'TailwindCSS'],
     projectLink: 'https://lumina-ecommerce-mauve.vercel.app/',
     githubLink: 'https://github.com/PJain7988/Lumina_Ecommerce'
   },
