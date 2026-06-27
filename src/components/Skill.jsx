@@ -48,12 +48,11 @@ const Skill = () => {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <h2 className="headline-2 reveal-up text-center">
-          Technologies & Tools I Work With
+        <h2 className="headline-2 reveal-up text-center text-4xl md:text-5xl font-extrabold text-white">
+          Technologies & Tools
         </h2>
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] mx-auto text-center">
-          These are the core technologies, frameworks, and tools I use to develop clean, efficient, and scalable web applications.
-          I continuously explore and improve my tech stack to stay updated with industry standards and best practices.
+        <p className="text-zinc-400 mt-4 mb-12 max-w-[60ch] mx-auto text-center text-lg leading-relaxed reveal-up">
+          The core technologies, frameworks, and tools I use to architect clean, efficient, and scalable applications.
         </p>
 
         <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
