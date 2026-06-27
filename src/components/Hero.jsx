@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
     return (
-        <section id="home" className="pt-24 lg:pt-28 pb-12 overflow-hidden relative">
+        <section id="home" className="pt-12 lg:pt-16 pb-12 overflow-hidden relative">
             {/* Decorative background glows */}
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
