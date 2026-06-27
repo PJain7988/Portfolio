@@ -88,25 +88,17 @@ const Hero = () => {
                     </motion.div>
                 </div>
 
-                <motion.div 
-                    className="flex justify-center lg:justify-end mt-16 lg:mt-0"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                >
-                    <figure className="relative w-full max-w-[400px] lg:max-w-[480px]">
-                        {/* Decorative styling behind image */}
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-[3rem] blur-xl z-0"></div>
-                        
-                        <div className="relative rounded-[2.5rem] overflow-hidden bg-zinc-900/50 border border-zinc-800 shadow-2xl p-3 z-10 backdrop-blur-sm hover:border-blue-500/50 transition-colors duration-500 group">
-                            <img
-                                src="/images/hero-banner.png"
-                                alt="Priya Jain"
-                                className="w-full h-auto rounded-[2rem] object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
+                <div className="flex justify-center lg:block mt-16 lg:mt-0">
+                    <figure className="w-full lg:max-w-[480px] ml-auto 
+                     bg-gradient-to-t from-sky-400 via-25% via-sky-40/40 to-55% 
+                     rounded-[30px] lg:rounded-[60px] overflow-hidden">
+                        <img
+                            src="/images/hero-banner.png"
+                            alt="Priya Jain"
+                            className="w-full h-auto object-cover"
+                        />
                     </figure>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
