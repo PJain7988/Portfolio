@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
     return (
@@ -34,7 +35,7 @@ const Hero = () => {
                     </motion.div>
 
                     <motion.h2
-                        className="headline-1 mb-5 lg:mb-6 text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white"
+                        className="headline-1 mb-3 lg:mb-4 text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -43,23 +44,25 @@ const Hero = () => {
                     </motion.h2>
 
                     <motion.div 
-                        className="flex flex-wrap items-center gap-3 mb-10"
+                        className="mb-10 text-2xl md:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 min-h-[60px] md:min-h-[80px]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     >
-                        {[
-                            "Software Development Engineer", 
-                            "Full-Stack Web Developer", 
-                            "AI & Machine Learning", 
-                            "Competitive Programmer"
-                        ].map((title, index) => (
-                            <div key={index} className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-xl shadow-lg backdrop-blur-sm">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 font-bold tracking-wide text-sm md:text-base">
-                                    {title}
-                                </span>
-                            </div>
-                        ))}
+                        <Typewriter
+                            words={[
+                                "Software Development Engineer",
+                                "Full-Stack Web Developer",
+                                "AI & ML Enthusiast",
+                                "Competitive Programmer"
+                            ]}
+                            loop={true}
+                            cursor
+                            cursorStyle="|"
+                            typeSpeed={60}
+                            deleteSpeed={40}
+                            delaySpeed={2000}
+                        />
                     </motion.div>
 
 
