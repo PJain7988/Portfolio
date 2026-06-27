@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillCard from './SkillCard';
+import { motion } from 'framer-motion';
 
 const skillItem = [
   // Programming Languages
@@ -44,30 +45,63 @@ const skillItem = [
   { imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg', label: 'Oracle SQL', desc: 'Developer Tools' }
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+};
+
 const Skill = () => {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section overflow-hidden">
       <div className="container">
-        <h2 className="headline-2 reveal-up text-center text-4xl md:text-5xl font-extrabold text-white">
+        <motion.h2 
+            className="headline-2 text-center text-4xl md:text-5xl font-extrabold text-white"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           Technologies & Tools
-        </h2>
-        <p className="text-zinc-400 mt-4 mb-12 max-w-[60ch] mx-auto text-center text-lg leading-relaxed reveal-up">
+        </motion.h2>
+        <motion.p 
+            className="text-zinc-400 mt-4 mb-12 max-w-[60ch] mx-auto text-center text-lg leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+        >
           The core technologies, frameworks, and tools I use to architect clean, efficient, and scalable applications.
-        </p>
+        </motion.p>
 
-        <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
+        <motion.div 
+            className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+        >
           {
             skillItem.map(({ imgSrc, label, desc }, key) => (
-              <SkillCard
-                key={key}
-                imgSrc={imgSrc}
-                label={label}
-                desc={desc}
-                classes="reveal-up"
-              />
+              <motion.div key={key} variants={item}>
+                <SkillCard
+                  imgSrc={imgSrc}
+                  label={label}
+                  desc={desc}
+                />
+              </motion.div>
             ))
           }
-        </div>
+        </motion.div>
       </div>
     </section>
   );
