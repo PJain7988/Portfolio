@@ -71,12 +71,12 @@ const Review = () => {
   }, []);
 
   return (
-    <section id="reviews" className="section overflow-hidden">
-      <div className="container">
-        <h2 className="headline-2 mb-8 reveal-up text-center text-white">
-          What Others Say About Me
+    <section id="reviews" className="section overflow-hidden py-20 bg-[#111]">
+      <div className="container max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-white reveal-up">
+          What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Others Say</span>
         </h2>
-        <div className="scrub-slide flex gap-6 w-fit flex-nowrap px-2">
+        <div className="scrub-slide flex gap-8 w-fit flex-nowrap px-2 pb-10">
           {reviews.map(({ content, name, imgSrc, company, rating }, key) => (
             <ReviewCard
               key={key}
