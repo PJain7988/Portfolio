@@ -12,7 +12,7 @@ const internships = [
     ],
   },
   {
-    role: 'Full Stack Development Intern',
+    role: 'Full Stack Developer',
     duration: 'June 2025 – August 2025',
     company: 'Coding Blocks (Geeta University, Panipat)',
     details: [
@@ -22,7 +22,7 @@ const internships = [
     ],
   },
   {
-    role: 'Data Structures & Algorithms (DSA) with C++',
+    role: 'Data Structures & Algorithms',
     duration: 'June 2024 – August 2024',
     company: 'Coding Blocks (Geeta University, Panipat)',
     details: [
@@ -32,7 +32,7 @@ const internships = [
     ],
   },
   {
-    role: 'Frontend Web Development Intern',
+    role: 'Frontend Developer',
     duration: 'May 2024 – June 2024',
     company: 'Octanet Pvt. Ltd. (Remote)',
     details: [
