@@ -76,6 +76,76 @@ const skillItem = [
     imgSrc: '/images/git.png',
     label: 'Git & GitHub',
     desc: 'Version Control'
+  },
+  {
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg',
+    label: 'VS Code',
+    desc: 'Code Editor'
+  },
+  {
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
+    label: 'Postman',
+    desc: 'API Testing'
+  },
+  {
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg',
+    label: 'Oracle SQL',
+    desc: 'Database Management'
+  },
+  {
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg',
+    label: 'NumPy',
+    desc: 'Scientific Computing'
+  },
+  {
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg',
+    label: 'Pandas',
+    desc: 'Data Analysis Library'
+  },
+  {
+    imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
+    label: 'Scikit-learn',
+    desc: 'Machine Learning Library'
+  },
+  {
+    imgSrc: '/images/ai-icon.svg',
+    label: 'Machine Learning',
+    desc: 'Artificial Intelligence'
+  },
+  {
+    imgSrc: '/images/ai-icon.svg',
+    label: 'NLP',
+    desc: 'Natural Language Processing'
+  },
+  {
+    imgSrc: '/images/ai-icon.svg',
+    label: 'Computer Vision',
+    desc: 'Image Processing'
+  },
+  {
+    imgSrc: '/images/ai-icon.svg',
+    label: 'Data Analysis',
+    desc: 'Data Insights'
+  },
+  {
+    imgSrc: '/images/cs-icon.svg',
+    label: 'OOPs',
+    desc: 'Object-Oriented Programming'
+  },
+  {
+    imgSrc: '/images/cs-icon.svg',
+    label: 'Operating Systems',
+    desc: 'System Architecture'
+  },
+  {
+    imgSrc: '/images/cs-icon.svg',
+    label: 'DBMS',
+    desc: 'Database Systems'
+  },
+  {
+    imgSrc: '/images/cs-icon.svg',
+    label: 'Computer Networks',
+    desc: 'Networking Concepts'
   }
 ];
 
