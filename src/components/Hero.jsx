@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
     return (
-        <section id="home" className="pt-28 lg:pt-36 pb-20 overflow-hidden relative">
+        <section id="home" className="pt-24 lg:pt-28 pb-12 overflow-hidden relative">
             {/* Decorative background glows */}
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -44,7 +44,7 @@ const Hero = () => {
                     </motion.h2>
 
                     <motion.div 
-                        className="mb-10 text-2xl md:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 min-h-[60px] md:min-h-[80px]"
+                        className="mb-6 text-2xl md:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 min-h-[40px] md:min-h-[50px] lg:min-h-[60px]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}

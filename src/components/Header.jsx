@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 const Header = () => {
     const [navOpen , setNavOpen] = useState(false);
     return (
-        <header className="fixed top-4 left-0 w-full flex justify-center items-center z-40 transition-all duration-300">
-            <div className="max-w-6xl w-[92%] mx-auto px-4 py-3 flex justify-between items-center bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 rounded-3xl shadow-2xl">
+        <header className="fixed top-3 left-0 w-full flex justify-center items-center z-40 transition-all duration-300">
+            <div className="max-w-6xl w-[92%] mx-auto px-4 py-2 flex justify-between items-center bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 rounded-[20px] shadow-2xl">
                 <h1>
                     <a href="/" className="logo flex items-center gap-3 group">
                         <div className="w-10 h-10 bg-zinc-950 rounded-xl flex items-center justify-center border border-zinc-800 shadow-inner group-hover:border-blue-500/50 transition-colors">
