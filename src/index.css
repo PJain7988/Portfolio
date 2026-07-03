@@ -53,14 +53,8 @@ body {
 .img-cover{
     @apply w-full h-full object-cover
 }
-.headline-1{
-    @apply max-w-max;
-    background: -webkit-linear-gradient(0deg,#fafafa,#a1a1a1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.headline-1{
-    @apply text-4xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15]
+.headline-1 {
+    @apply max-w-max text-4xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15];
 }
 .headline-2{
     @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
