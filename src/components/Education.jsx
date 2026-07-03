@@ -11,11 +11,19 @@ const educationList = [
     ],
   },
   {
-    degree: 'Higher Secondary (12th Grade)',
+    degree: 'Intermediate (11th and 12th Grade)',
     duration: '2021 – 2023',
-    institution: 'Your High School Name',
+    institution: 'Guru Gobind Singh Sr. Sec. School, Safidon, Haryana (HBSE)',
     details: [
-      'Completed secondary education with a focus on Physics, Chemistry, and Mathematics (PCM).',
+      'Completed Intermediate education with a focus on Physics, Chemistry, and Mathematics (PCM).',
+    ],
+  },
+  {
+    degree: 'Matriculation (10th Grade)',
+    duration: '2019 – 2021',
+    institution: 'Guru Gobind Singh Sr. Sec. School, Safidon, Haryana (HBSE)',
+    details: [
+      'Completed matriculation education with a strong academic foundation.',
     ],
   }
 ];
@@ -33,7 +41,7 @@ const Education = () => {
             <div key={index} className="relative pl-8 md:pl-12 reveal-up group">
               {/* Timeline Dot */}
               <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-emerald-500 border-4 border-[#0a0a0a] group-hover:bg-emerald-400 transition-colors shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-              
+
               {/* Content Card */}
               <div className="bg-zinc-900/50 border border-zinc-800 p-6 md:p-8 rounded-2xl shadow-lg hover:border-zinc-700 transition-colors backdrop-blur-sm">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-3">
@@ -45,7 +53,7 @@ const Education = () => {
                     {edu.duration}
                   </span>
                 </div>
-                
+
                 <ul className="list-none space-y-3 mt-6">
                   {edu.details.map((point, idx) => (
                     <li key={idx} className="text-zinc-400 flex items-start">
