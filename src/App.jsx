@@ -15,6 +15,7 @@ import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Internship from "./components/Internship";
+import Education from "./components/Education";
 import CodingAchievements from "./components/CodingAchievements";
 const App = () => {
 
@@ -44,6 +45,7 @@ const App = () => {
         <About />
         <Project />
         <Internship/>
+        <Education />
         <Skill />
         <CodingAchievements />
         <Review />
