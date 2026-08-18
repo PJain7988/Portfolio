@@ -1,27 +1,39 @@
-import {ReactLenis} from "lenis/react";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Review from "./components/Review";
-import Skill from "./components/Skill";
-import Project from "./components/Project";
-import Internship from "./components/Internship";
-import Education from "./components/Education";
-import CodingAchievements from "./components/CodingAchievements";
-const App = () => {
+import Footer from "./components/Footer";
 
-  useGSAP(()=>{
+// Page Components
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import SkillsPage from "./pages/SkillsPage";
+import CodingPage from "./pages/CodingPage";
+import ExperiencePage from "./pages/ExperiencePage";
+import ContactPage from "./pages/ContactPage";
+
+// ScrollToTop on Route Navigation
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+const App = () => {
+  useGSAP(() => {
     const elements = gsap.utils.toArray('.reveal-up');
-    elements.forEach((element)=>{
+    elements.forEach((element) => {
       gsap.to(element, {
         scrollTrigger: {
           trigger: element,
@@ -33,27 +45,26 @@ const App = () => {
         opacity: 1,
         duration: 1,
         ease: 'power2.out'
-      })
-    })
-  })
+      });
+    });
+  });
 
   return (
     <ReactLenis root>
+      <ScrollToTop />
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Project />
-        <Internship/>
-        <Education />
-        <Skill />
-        <CodingAchievements />
-        <Review />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/coding" element={<CodingPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       <Footer />
     </ReactLenis>
-  )
-}
+  );
+};
 
 export default App;
