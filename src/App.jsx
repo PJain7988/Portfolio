@@ -16,7 +16,6 @@ import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import CodingPage from "./pages/CodingPage";
-import ExperiencePage from "./pages/ExperiencePage";
 import ContactPage from "./pages/ContactPage";
 
 // ScrollToTop on Route Navigation
@@ -59,7 +58,6 @@ const App = () => {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/coding" element={<CodingPage />} />
-        <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />

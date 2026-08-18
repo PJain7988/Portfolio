@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Instagram, Mail, ArrowUp, Code2, Trophy, Terminal, Award } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail, ArrowUp, Code2, Trophy, Terminal, MapPin } from 'lucide-react';
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -10,10 +10,9 @@ const Footer = () => {
     const navLinks = [
         { label: 'Home', path: '/' },
         { label: 'About Me', path: '/about' },
+        { label: 'Coding Profiles', path: '/coding' },
         { label: 'Projects Showcase', path: '/projects' },
         { label: 'Technical Skills', path: '/skills' },
-        { label: 'Coding Profiles', path: '/coding' },
-        { label: 'Experience & Timeline', path: '/experience' },
         { label: 'Contact', path: '/contact' }
     ];
 
@@ -44,11 +43,11 @@ const Footer = () => {
                             </span>
                         </Link>
                         <p className="text-sm text-zinc-400 leading-relaxed font-normal">
-                            Software Development Engineer specializing in Full-Stack Web Development, Data Structures & Algorithms, and AI/ML applications.
+                            Software Development Engineer specializing in Full-Stack Web Engineering, Data Structures & Algorithms, and AI/ML applications.
                         </p>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Available for Full-Time SDE Opportunities
+                            Available for Engineering Opportunities
                         </div>
                     </div>
 
@@ -100,8 +99,8 @@ const Footer = () => {
                             <Mail size={18} className="text-cyan-400" />
                             <span>Get In Touch</span>
                         </h4>
-                        <p className="text-sm text-zinc-400 mb-4">
-                            Panipat, Haryana, India<br />
+                        <p className="text-sm text-zinc-400 mb-4 leading-relaxed">
+                            Safidon, Haryana 126112, India<br />
                             <a href="mailto:priyajain7988@gmail.com" className="text-blue-400 hover:underline">
                                 priyajain7988@gmail.com
                             </a>

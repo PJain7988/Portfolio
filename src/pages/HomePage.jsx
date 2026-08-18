@@ -5,8 +5,6 @@ import Project from "../components/Project";
 import Skill from "../components/Skill";
 import CodingAchievements from "../components/CodingAchievements";
 import Contact from "../components/Contact";
-import Education from "../components/Education";
-import Internship from "../components/Internship";
 
 const HomePage = () => {
     return (
@@ -16,8 +14,6 @@ const HomePage = () => {
             <CodingAchievements />
             <Project />
             <Skill />
-            <Internship />
-            <Education />
             <Contact />
         </main>
     );

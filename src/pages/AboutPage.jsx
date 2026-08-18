@@ -1,9 +1,7 @@
 import React from "react";
 import About from "../components/About";
-import Education from "../components/Education";
-import Internship from "../components/Internship";
 import { motion } from "framer-motion";
-import { User, Award, Code, BookOpen, CheckCircle, ArrowRight } from "lucide-react";
+import { User, Award, Code, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
@@ -18,13 +16,13 @@ const AboutPage = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
                         <User size={16} />
-                        <span>About Me & Career Roadmap</span>
+                        <span>About Me & SDE Vision</span>
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4">
                         Driven by Code, Powered by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Problem Solving</span>
                     </h1>
                     <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
-                        I am a Computer Science student at Geeta University with a passion for software engineering, competitive programming, and intelligent systems.
+                        Software Development Engineer dedicated to building scalable web platforms, solving algorithmic challenges, and engineering intelligent software systems.
                     </p>
                 </motion.div>
             </div>
@@ -60,14 +58,11 @@ const AboutPage = () => {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-3">Artificial Intelligence & ML</h3>
                         <p className="text-zinc-400 text-sm leading-relaxed">
-                            Hands-on experience developing ML predictive models, Data Preprocessing, Scikit-learn, and NLP applications during industry internship.
+                            Hands-on experience developing ML predictive models, Data Preprocessing, Scikit-learn, and NLP applications.
                         </p>
                     </div>
                 </div>
             </div>
-
-            <Internship />
-            <Education />
 
             <div className="max-w-4xl mx-auto px-6 py-12 text-center">
                 <Link

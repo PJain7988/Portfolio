@@ -31,7 +31,7 @@ const ContactPage = () => {
             Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Touch</span>
           </h1>
           <p className="text-zinc-400 text-base md:text-lg">
-            Available for Software Development Engineer (SDE) roles, full-stack web projects, and technical collaborations.
+            Available for Software Development Engineer (SDE) roles, full-stack web engineering, and technical collaborations.
           </p>
         </motion.div>
 
@@ -61,8 +61,8 @@ const ContactPage = () => {
             </div>
             <div>
               <div className="text-xs text-zinc-400 font-medium">Location</div>
-              <div className="text-sm font-bold text-white">Panipat, Haryana</div>
-              <div className="text-xs text-zinc-400 mt-0.5">India (Open to Relocation)</div>
+              <div className="text-sm font-bold text-white">Safidon, Haryana 126112</div>
+              <div className="text-xs text-zinc-400 mt-0.5">India (Open to Remote / Relocation)</div>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ const ContactPage = () => {
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 Actively Hiring / Available
               </div>
-              <div className="text-xs text-zinc-400 mt-0.5">Full-Time SDE & Internships</div>
+              <div className="text-xs text-zinc-400 mt-0.5">Software Engineering Roles</div>
             </div>
           </div>
 

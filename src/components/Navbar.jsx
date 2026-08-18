@@ -5,10 +5,9 @@ const Navbar = ({ navOpen, closeNav }) => {
     const navItems = [
         { label: 'Home', link: '/' },
         { label: 'About', link: '/about' },
+        { label: 'Coding Profiles', link: '/coding' },
         { label: 'Projects', link: '/projects' },
         { label: 'Skills', link: '/skills' },
-        { label: 'Coding Profiles', link: '/coding' },
-        { label: 'Experience', link: '/experience' },
         { label: 'Contact', link: '/contact' }
     ];
 
