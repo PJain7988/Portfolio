@@ -1,15 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { Code, Download, ArrowRight, Trophy, Sparkles, Terminal } from "lucide-react";
+import { Code, Download, ArrowRight, Trophy, Sparkles, Terminal, Cpu, CheckCircle2, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
     const cpStats = [
-        { label: "LeetCode Solved", value: "1000+", link: "/coding" },
-        { label: "CodeChef Rating", value: "1360", link: "/coding" },
-        { label: "Codeforces Rating", value: "922", link: "/coding" },
-        { label: "HackerRank", value: "5★ C++", link: "/coding" }
+        { label: "LeetCode Solved", value: "1000+", link: "/coding", badge: "Rating 1551" },
+        { label: "CodeChef Rating", value: "1360", link: "/coding", badge: "1★ Diamond" },
+        { label: "Codeforces Rating", value: "922", link: "/coding", badge: "Rank Newbie" },
+        { label: "HackerRank Badge", value: "5★ C++", link: "/coding", badge: "Gold Verified" }
+    ];
+
+    const techBadges = [
+        "MERN Stack", "C++ DSA", "Python ML", "SQL Systems", "Rest APIs"
     ];
 
     return (
@@ -43,7 +47,7 @@ const Hero = () => {
                                 <span className="relative w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.9)]">
                                     <span className="absolute inset-0 w-full h-full rounded-full bg-emerald-400 animate-ping opacity-75"></span>
                                 </span>
-                                Available for SDE & Engineering Roles
+                                Available for SDE & Software Engineering Roles
                             </div>
                         </motion.div>
 
@@ -82,13 +86,31 @@ const Hero = () => {
 
                         {/* Bio Paragraph */}
                         <motion.p
-                            className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8 max-w-[55ch]"
+                            className="text-zinc-400 text-base md:text-lg leading-relaxed mb-6 max-w-[55ch]"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            Computer Science Engineer passionate about building scalable full-stack applications and solving algorithmic problems. Rated on Codeforces, CodeChef, and LeetCode.
+                            Computer Science Engineer specialized in building scalable web architectures and solving algorithmic problems. Rated on Codeforces, CodeChef, and LeetCode.
                         </motion.p>
+
+                        {/* Tech Stack Pills */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.35 }}
+                            className="flex flex-wrap items-center gap-2 mb-8"
+                        >
+                            {techBadges.map((badge, idx) => (
+                                <span 
+                                    key={idx} 
+                                    className="px-3 py-1 bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-semibold rounded-lg flex items-center gap-1.5"
+                                >
+                                    <Zap size={12} className="text-blue-400" />
+                                    {badge}
+                                </span>
+                            ))}
+                        </motion.div>
 
                         {/* Action CTA Buttons */}
                         <motion.div 
@@ -141,6 +163,9 @@ const Hero = () => {
                                     </div>
                                     <div className="text-xs text-zinc-400 font-medium mt-1">
                                         {stat.label}
+                                    </div>
+                                    <div className="text-[10px] text-blue-400/80 font-mono mt-0.5">
+                                        {stat.badge}
                                     </div>
                                 </Link>
                             ))}
