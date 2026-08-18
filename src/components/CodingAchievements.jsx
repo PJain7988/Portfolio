@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowUpRight, Award, Code2, Trophy, Flame, Star, CheckCircle2, RefreshCw } from "lucide-react";
+import { ArrowUpRight, Award, Code2, Trophy, Flame, Star, CheckCircle2, RefreshCw, Terminal, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function CodingAchievements() {
@@ -59,6 +59,62 @@ export default function CodingAchievements() {
     fetchLiveCodingStats();
   }, []);
 
+  // Distinct branded logo header renderer for each platform
+  const renderPlatformHeader = (item) => {
+    if (item.id === "codeforces") {
+      return (
+        <div className="flex flex-col items-center justify-center p-6 text-center">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-4 h-9 bg-[#F5B041] rounded-sm shadow-md"></span>
+            <span className="w-4 h-12 bg-[#3498DB] rounded-sm shadow-md"></span>
+            <span className="w-4 h-7 bg-[#E74C3C] rounded-sm shadow-md"></span>
+          </div>
+          <span className="text-white font-extrabold text-2xl tracking-wider uppercase font-mono">
+            CODE<span className="text-blue-400">FORCES</span>
+          </span>
+          <span className="text-xs text-red-400 font-mono mt-1">@Priya_GU • Rating {item.rating}</span>
+        </div>
+      );
+    }
+
+    if (item.id === "codechef") {
+      return (
+        <div className="flex flex-col items-center justify-center p-6 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center mb-3 shadow-inner">
+            <span className="text-amber-400 text-3xl font-black">👨‍🍳</span>
+          </div>
+          <span className="text-white font-extrabold text-2xl tracking-wider uppercase font-mono">
+            CODE<span className="text-amber-400">CHEF</span>
+          </span>
+          <span className="text-xs text-amber-400 font-mono mt-1">@priya_jain_01 • 1★ Diamond League</span>
+        </div>
+      );
+    }
+
+    if (item.id === "leetcode") {
+      return (
+        <div className="flex flex-col items-center justify-center p-6 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-yellow-500/20 border border-yellow-500/30 flex items-center justify-center mb-3 shadow-inner">
+            <span className="text-yellow-400 text-3xl font-black">⚡</span>
+          </div>
+          <span className="text-white font-extrabold text-2xl tracking-wider uppercase font-mono">
+            LEET<span className="text-yellow-400">CODE</span>
+          </span>
+          <span className="text-xs text-yellow-400 font-mono mt-1">@Student_GU • 1000+ Solved</span>
+        </div>
+      );
+    }
+
+    return (
+      <img
+        src={item.logo}
+        alt={item.name}
+        loading="lazy"
+        className="max-h-28 w-auto object-contain group-hover:scale-105 transition-transform duration-500"
+      />
+    );
+  };
+
   const platforms = [
     {
       id: "codeforces",
@@ -74,8 +130,7 @@ export default function CodingAchievements() {
       tagColor: "bg-red-500/10 text-red-400 border-red-500/20",
       accentBg: "bg-red-500",
       verifyLink: "https://codeforces.com/profile/Priya_GU",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeforces/codeforces-original.svg",
-      description: `Codeforces Competitive Programming Profile. Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
+      description: `Official Codeforces Profile for Priya_GU. Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
       tags: [`Rating: ${liveStats.codeforces.rating}`, `Rank: ${liveStats.codeforces.rank}`, liveStats.codeforces.solved, "Handle: Priya_GU"]
     },
     {
@@ -92,8 +147,7 @@ export default function CodingAchievements() {
       tagColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
       accentBg: "bg-amber-600",
       verifyLink: "https://www.codechef.com/users/priya_jain_01",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codechef/codechef-original.svg",
-      description: `1★ CodeChef Rating: ${liveStats.codechef.rating} (DSA Rating: 1628). Participated in rated contests.`,
+      description: `Official CodeChef Profile for priya_jain_01. Rating: ${liveStats.codechef.rating} (DSA Rating: 1628, 1★ Diamond League).`,
       tags: [`Rating: ${liveStats.codechef.rating}`, "DSA Rating: 1628", liveStats.codechef.solved, "Diamond League"]
     },
     {
@@ -110,8 +164,7 @@ export default function CodingAchievements() {
       tagColor: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
       accentBg: "bg-yellow-500",
       verifyLink: "https://leetcode.com/u/Student_GU/",
-      logo: "/images/leetcodeprofile.jpg",
-      description: `${liveStats.leetcode.solved} Data Structures & Algorithms problems. Contest Rating 1551.`,
+      description: `Official LeetCode Profile for Student_GU. ${liveStats.leetcode.solved} DSA problems. Rating 1551.`,
       tags: [liveStats.leetcode.solved, "Max Rating: 1551", "Top 32% Global", "DSA Specialist"]
     },
     {
@@ -129,7 +182,7 @@ export default function CodingAchievements() {
       accentBg: "bg-emerald-500",
       verifyLink: "https://www.geeksforgeeks.org/user/user_96fineo2gqw/",
       logo: "/images/gfg.png",
-      description: "86+ DSA problems solved with overall coding score of 240+.",
+      description: "86+ Data Structures & Algorithms problems solved with coding score 240+.",
       tags: ["86+ Solved", "Score: 240+", "Data Structures"]
     },
     {
@@ -258,13 +311,13 @@ export default function CodingAchievements() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
             <Trophy size={16} className="text-blue-400" />
-            <span>Competitive Programming & Certifications</span>
+            <span>Verified Coding Profiles & Certifications</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
             Coding Profiles & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Achievements</span>
           </h2>
           <p className="text-zinc-400 text-base md:text-lg mb-6">
-            Direct verified metrics from Codeforces, CodeChef, LeetCode, GeeksforGeeks, HackerRank, and national hackathon certificates.
+            Distinct profile cards for Codeforces, CodeChef, LeetCode, GeeksforGeeks, HackerRank, and national hackathon certificates.
           </p>
 
           <button
@@ -331,18 +384,9 @@ export default function CodingAchievements() {
 
                 <div>
                   {/* Top Image / Logo Header */}
-                  <div className="relative h-44 w-full bg-zinc-950 overflow-hidden border-b border-zinc-800/80 flex items-center justify-center p-6">
-                    <img
-                      src={item.logo}
-                      alt={item.name}
-                      loading="lazy"
-                      className="max-h-28 w-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "/images/leetcodeprofile.jpg";
-                      }}
-                    />
-                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold bg-zinc-950/80 border border-zinc-800 text-zinc-300 backdrop-blur-md flex items-center gap-1.5">
+                  <div className="relative h-44 w-full bg-zinc-950 overflow-hidden border-b border-zinc-800/80 flex items-center justify-center">
+                    {renderPlatformHeader(item)}
+                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold bg-zinc-950/80 border border-zinc-800 text-zinc-300 backdrop-blur-md flex items-center gap-1.5 z-10">
                       <span className={`w-2 h-2 rounded-full ${item.accentBg}`}></span>
                       {item.rank}
                     </div>

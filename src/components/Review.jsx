@@ -1,7 +1,7 @@
 import React from 'react';
 import ReviewCard from './ReviewCard';
 import { motion } from 'framer-motion';
-import { MessageSquareQuote, Star } from 'lucide-react';
+import { MessageSquareQuote } from 'lucide-react';
 
 const reviews = [
   {
@@ -23,7 +23,7 @@ const reviews = [
   {
     content:
       '1000+ LeetCode problems solved across dynamic programming, trees, and graphs. Exceptional algorithmic problem-solving accuracy.',
-    name: 'LeetCode CP Profile',
+    name: 'LeetCode CP Benchmark',
     imgSrc: '/images/leetcodeprofile.jpg',
     company: 'LeetCode (Rating 1551)',
     rating: 5,
@@ -54,44 +54,56 @@ const reviews = [
   },
 ];
 
+// Duplicate for continuous seamless infinite loop
+const doubleReviews = [...reviews, ...reviews];
+
 const Review = () => {
   return (
     <section id="reviews" className="py-20 bg-zinc-950 relative overflow-hidden">
-      {/* Background glow */}
+      {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-600/10 rounded-full blur-[160px] pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        
+      <div className="max-w-6xl mx-auto px-6 relative z-10 mb-12">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
             <MessageSquareQuote size={16} />
-            <span>Peer Recommendations & Endorsements</span>
+            <span>Continuous Infinite Testimonial Train</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
-            Mentors & Peer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Feedback</span>
+            Mentors & Peer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Endorsements</span>
           </h2>
           <p className="text-zinc-400 text-base md:text-lg">
-            Testimonials and verified reviews from technical mentors, institution leads, and competitive programming milestones.
+            Hover over any testimonial card to pause the continuous sliding train animation.
           </p>
         </motion.div>
+      </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map(({ content, name, imgSrc, company, rating }, key) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: key * 0.08 }}
-            >
+      {/* Infinite Marquee Track ("Working like a train") */}
+      <div className="w-full overflow-hidden flex py-4 relative">
+        {/* Gradient edge masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-zinc-950 to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-zinc-950 to-transparent z-20 pointer-events-none"></div>
+
+        <motion.div
+          className="flex gap-6 w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 35,
+            ease: "linear",
+          }}
+          whileHover={{ animationPlayState: "paused" }}
+        >
+          {doubleReviews.map(({ content, name, imgSrc, company, rating }, key) => (
+            <div key={key} className="w-[340px] md:w-[420px] shrink-0">
               <ReviewCard
                 name={name}
                 imgSrc={imgSrc}
@@ -99,10 +111,9 @@ const Review = () => {
                 content={content}
                 rating={rating}
               />
-            </motion.div>
+            </div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
