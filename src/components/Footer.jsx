@@ -13,6 +13,7 @@ const Footer = () => {
         { label: 'Coding Profiles', path: '/coding' },
         { label: 'Projects Showcase', path: '/projects' },
         { label: 'Technical Skills', path: '/skills' },
+        { label: 'Experience & Education', path: '/experience' },
         { label: 'Contact', path: '/contact' }
     ];
 

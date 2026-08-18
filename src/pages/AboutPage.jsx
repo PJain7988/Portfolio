@@ -1,5 +1,7 @@
 import React from "react";
 import About from "../components/About";
+import Education from "../components/Education";
+import Internship from "../components/Internship";
 import { motion } from "framer-motion";
 import { User, Award, Code, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -63,6 +65,9 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+
+            <Internship />
+            <Education />
 
             <div className="max-w-4xl mx-auto px-6 py-12 text-center">
                 <Link

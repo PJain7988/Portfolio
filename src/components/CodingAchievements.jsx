@@ -6,18 +6,18 @@ export default function CodingAchievements() {
   const [activeTab, setActiveTab] = useState("all");
   const [isSyncing, setIsSyncing] = useState(false);
 
-  // Live CP Data State
+  // Fast Instant Initial State (No reload lag)
   const [liveStats, setLiveStats] = useState({
     codeforces: { rating: 922, rank: "Newbie", solved: "100+ Solved" },
     leetcode: { rating: 1551, rank: "Top 32% Globally", solved: "1000+ Solved" },
     codechef: { rating: 1360, rank: "1★ (Diamond League)", solved: "255+ Solved" }
   });
 
-  // Automatically fetch live rating & questions count from public APIs
+  // Fast Non-Blocking Background API Fetch
   const fetchLiveCodingStats = async () => {
     setIsSyncing(true);
     try {
-      // 1. Fetch Codeforces API
+      // Non-blocking fetch Codeforces API
       const cfRes = await fetch("https://codeforces.com/api/user.info?handles=Priya_GU");
       if (cfRes.ok) {
         const cfData = await cfRes.json();
@@ -34,30 +34,7 @@ export default function CodingAchievements() {
         }
       }
 
-      // Fetch Codeforces Solved Count
-      const cfStatusRes = await fetch("https://codeforces.com/api/user.status?handle=Priya_GU");
-      if (cfStatusRes.ok) {
-        const statusData = await cfStatusRes.json();
-        if (statusData.status === "OK") {
-          const solvedSet = new Set();
-          statusData.result.forEach((sub) => {
-            if (sub.verdict === "OK" && sub.problem) {
-              solvedSet.add(`${sub.problem.contestId}-${sub.problem.index}`);
-            }
-          });
-          if (solvedSet.size > 0) {
-            setLiveStats((prev) => ({
-              ...prev,
-              codeforces: {
-                ...prev.codeforces,
-                solved: `${solvedSet.size}+ Solved`
-              }
-            }));
-          }
-        }
-      }
-
-      // 2. Fetch LeetCode Stats API
+      // Non-blocking fetch LeetCode API
       const lcRes = await fetch("https://leetcode-stats-api.herokuapp.com/Student_GU");
       if (lcRes.ok) {
         const lcData = await lcRes.json();
@@ -72,7 +49,7 @@ export default function CodingAchievements() {
         }
       }
     } catch (err) {
-      console.log("Using cached profile metrics:", err);
+      // Silent catch to prevent UI delay
     } finally {
       setIsSyncing(false);
     }
@@ -98,8 +75,8 @@ export default function CodingAchievements() {
       accentBg: "bg-red-500",
       verifyLink: "https://codeforces.com/profile/Priya_GU",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeforces/codeforces-original.svg",
-      description: `Active competitive programmer. Live Codeforces Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
-      tags: [`Rating: ${liveStats.codeforces.rating}`, `Rank: ${liveStats.codeforces.rank}`, liveStats.codeforces.solved, "Live API Synced"]
+      description: `Codeforces Competitive Programming Profile. Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
+      tags: [`Rating: ${liveStats.codeforces.rating}`, `Rank: ${liveStats.codeforces.rank}`, liveStats.codeforces.solved, "Handle: Priya_GU"]
     },
     {
       id: "codechef",
@@ -116,7 +93,7 @@ export default function CodingAchievements() {
       accentBg: "bg-amber-600",
       verifyLink: "https://www.codechef.com/users/priya_jain_01",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codechef/codechef-original.svg",
-      description: `1★ CodeChef Rating: ${liveStats.codechef.rating} (DSA Rating: 1628). Participated in 5+ rated contests.`,
+      description: `1★ CodeChef Rating: ${liveStats.codechef.rating} (DSA Rating: 1628). Participated in rated contests.`,
       tags: [`Rating: ${liveStats.codechef.rating}`, "DSA Rating: 1628", liveStats.codechef.solved, "Diamond League"]
     },
     {
@@ -135,7 +112,7 @@ export default function CodingAchievements() {
       verifyLink: "https://leetcode.com/u/Student_GU/",
       logo: "/images/leetcodeprofile.jpg",
       description: `${liveStats.leetcode.solved} Data Structures & Algorithms problems. Contest Rating 1551.`,
-      tags: [liveStats.leetcode.solved, "Max Rating: 1551", "Top 32% Global", "Live API Synced"]
+      tags: [liveStats.leetcode.solved, "Max Rating: 1551", "Top 32% Global", "DSA Specialist"]
     },
     {
       id: "gfg",
@@ -281,13 +258,13 @@ export default function CodingAchievements() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
             <Trophy size={16} className="text-blue-400" />
-            <span>Live Sync CP & Certifications</span>
+            <span>Competitive Programming & Certifications</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
-            Coding Profiles & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Live Achievements</span>
+            Coding Profiles & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Achievements</span>
           </h2>
           <p className="text-zinc-400 text-base md:text-lg mb-6">
-            Live auto-synced metrics from Codeforces, CodeChef, LeetCode, GeeksforGeeks, HackerRank, and verified certificates.
+            Direct verified metrics from Codeforces, CodeChef, LeetCode, GeeksforGeeks, HackerRank, and national hackathon certificates.
           </p>
 
           <button
@@ -358,6 +335,7 @@ export default function CodingAchievements() {
                     <img
                       src={item.logo}
                       alt={item.name}
+                      loading="lazy"
                       className="max-h-28 w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
                         e.target.onerror = null;
