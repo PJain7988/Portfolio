@@ -4,7 +4,6 @@ import About from "../components/About";
 import Project from "../components/Project";
 import Skill from "../components/Skill";
 import CodingAchievements from "../components/CodingAchievements";
-import Review from "../components/Review";
 import Contact from "../components/Contact";
 import Education from "../components/Education";
 import Internship from "../components/Internship";
@@ -19,7 +18,6 @@ const HomePage = () => {
             <Skill />
             <Internship />
             <Education />
-            <Review />
             <Contact />
         </main>
     );
