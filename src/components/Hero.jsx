@@ -121,7 +121,7 @@ const Hero = () => {
                         >
                             <a
                                 href="/images/Priya_Jain.pdf"
-                                download
+                                download="Priya_Jain_Resume.pdf"
                                 className="flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/25 hover:-translate-y-0.5"
                             >
                                 <Download size={18} />
