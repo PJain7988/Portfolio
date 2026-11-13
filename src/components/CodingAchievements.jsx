@@ -18,7 +18,7 @@ export default function CodingAchievements() {
     setIsSyncing(true);
     try {
       // Non-blocking fetch Codeforces API
-      const cfRes = await fetch("https://codeforces.com/api/user.info?handles=Priya_GU");
+      const cfRes = await fetch("https://codeforces.com/api/user.info?handles=Jain_Priya");
       if (cfRes.ok) {
         const cfData = await cfRes.json();
         if (cfData.status === "OK" && cfData.result.length > 0) {
@@ -72,7 +72,7 @@ export default function CodingAchievements() {
           <span className="text-white font-extrabold text-2xl tracking-wider uppercase font-mono">
             CODE<span className="text-blue-400">FORCES</span>
           </span>
-          <span className="text-xs text-red-400 font-mono mt-1">@Priya_GU • Rating {item.rating}</span>
+          <span className="text-xs text-red-400 font-mono mt-1">@Jain_Priya • Rating {item.rating}</span>
         </div>
       );
     }
@@ -120,7 +120,7 @@ export default function CodingAchievements() {
       id: "codeforces",
       type: "cp",
       name: "Codeforces",
-      handle: "Priya_GU",
+      handle: "Jain_Priya",
       rank: liveStats.codeforces.rank,
       rating: liveStats.codeforces.rating,
       maxRating: liveStats.codeforces.rating,
@@ -129,9 +129,9 @@ export default function CodingAchievements() {
       borderColor: "border-red-500/40 hover:border-red-500",
       tagColor: "bg-red-500/10 text-red-400 border-red-500/20",
       accentBg: "bg-red-500",
-      verifyLink: "https://codeforces.com/profile/Priya_GU",
-      description: `Official Codeforces Profile for Priya_GU. Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
-      tags: [`Rating: ${liveStats.codeforces.rating}`, `Rank: ${liveStats.codeforces.rank}`, liveStats.codeforces.solved, "Handle: Priya_GU"]
+      verifyLink: "https://codeforces.com/profile/Jain_Priya",
+      description: `Official Codeforces Profile for Jain_Priya. Rating: ${liveStats.codeforces.rating} (${liveStats.codeforces.rank}).`,
+      tags: [`Rating: ${liveStats.codeforces.rating}`, `Rank: ${liveStats.codeforces.rank}`, liveStats.codeforces.solved, "Handle: Jain_Priya"]
     },
     {
       id: "codechef",

@@ -18,7 +18,7 @@ const Footer = () => {
     ];
 
     const cpProfiles = [
-        { label: 'Codeforces (Priya_GU)', url: 'https://codeforces.com/profile/Priya_GU' },
+        { label: 'Codeforces (Jain_Priya)', url: 'https://codeforces.com/profile/Jain_Priya' },
         { label: 'CodeChef (priya_jain_01)', url: 'https://www.codechef.com/users/priya_jain_01' },
         { label: 'LeetCode (Student_GU)', url: 'https://leetcode.com/u/Student_GU/' },
         { label: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org/user/user_96fineo2gqw/' },

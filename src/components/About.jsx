@@ -33,7 +33,7 @@ const About = () => {
                 Hello! I'm <strong className="text-white">Priya Jain</strong>, a passionate Software Development Engineer (SDE) and Computer Science student at Geeta University, specializing in Full-Stack Web Engineering and Artificial Intelligence.
               </p>
               <p className="text-zinc-400 mb-6 leading-relaxed text-base md:text-lg">
-                With a robust foundation in Data Structures and Algorithms, I thrive on solving complex computational problems and building scalable software solutions. Rated across Codeforces (Priya_GU), CodeChef (priya_jain_01), and LeetCode (Student_GU), I am driven to architect high-performance web applications and intelligent systems.
+                With a robust foundation in Data Structures and Algorithms, I thrive on solving complex computational problems and building scalable software solutions. Rated across Codeforces (Jain_Priya), CodeChef (priya_jain_01), and LeetCode (Student_GU), I am driven to architect high-performance web applications and intelligent systems.
               </p>
             </div>
 
